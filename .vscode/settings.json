@@ -1,0 +1,7 @@
+{
+    "python.formatting.provider": "black",
+    "python.linting.enabled": true,
+    "python.linting.flake8Enabled": true,
+    "python.linting.pylintEnabled": false,
+    "python.pythonPath": "/home/francisco-ponce/.local/share/virtualenvs/101_python_api-TB1jexsM/bin/python",
+}

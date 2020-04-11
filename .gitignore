@@ -1,0 +1,16 @@
+# Virtualenv Files
+venv/
+
+# MacOs
+**/.DS_Store
+
+# IntellJ
+.idea
+
+# Cache Files
+**/__pycache__/
+
+# ENV project file
+django/project/\.env
+
+\.vscode/

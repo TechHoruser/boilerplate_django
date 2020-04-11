@@ -1,0 +1,26 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+pre-commit = "*"
+flake8 = "*"
+black = "==19.10b0"
+ptvsd = "*"
+django-extensions = "*"
+pytest = "*"
+# Create ER Diagram
+#pydot = "*"
+#pygraphviz = "*"
+
+[packages]
+django = "~=2.0"
+gunicorn = "~=20.0"
+python-dotenv = "~=0.12.0"
+
+[requires]
+python_version = "3.*"
+
+[pipenv]
+allow_prereleases = true

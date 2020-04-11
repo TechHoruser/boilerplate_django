@@ -1,0 +1,37 @@
+version: "3.7"
+
+services:
+  web:
+    container_name: 101_python_api
+    ports:
+      - 8000:8000
+      # Debug Port
+      - 8001:8001
+    env_file:
+      - ./django/project/.env
+    volumes:
+      - ./django:/app
+    depends_on:
+      - db-mysql
+    networks:
+      - web
+
+  # MySQL Connection (Change if you need other database)
+  db-mysql:
+    image: mysql:8.0.19
+    container_name: project_mysql
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_general_ci --default-authentication-plugin=mysql_native_password
+    volumes:
+      - mysql-volume:/var/lib/mysql
+    env_file:
+      - django/project/.env
+    ports:
+      - 3306:3306
+    networks:
+      - web
+
+volumes:
+  mysql-volume:
+
+networks:
+  web:

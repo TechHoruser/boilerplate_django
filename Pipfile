@@ -15,7 +15,7 @@ pytest = "*"
 #pygraphviz = "*"
 
 [packages]
-django = "~=2.0"
+django = "~=2.2"
 gunicorn = "~=20.0"
 python-dotenv = "~=0.12.0"
 
